@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>甘デジのハマリ確率</title>
+    <link rel="stylesheet" href="ama.css">
+  </head>
+  <body>
+      <header>
+          <div class="header-logo"><a href="patikaku.html">パチンコのハマリ確率</a></div>
+          <div class="header-list">
+          <a href="middle.html">ミドル(1/319)</a>
+          <a href="lightmiddle.html">ライトミドル(1/199)</a>
+          <a href="ama.html">甘デジ(1/99)</a>
+          </div>
+        
+        </header>
+        <form class="ama-form">
+            <dl>
+                <dt>甘デジで</dt>
+                <dd><input type="numner" class="box" name="kaisuu"></dd>
+                <dt>回ハマる確率は</dt>
+                <p><input type="button" class="calc-btn" onclick="calc(kaisuu.value);" value="押せ!!"></p>
+
+                
+                <dd><input id="hamari" class="box" type="text" readonly=""></dd>
+                <dt>%です。</dt>
+            </dl>
+        </form>
+
+        <script>
+            function calc(kaisuu){
+                const hamari_value = document.getElementById('hamari').value = Math.pow((98/99),kaisuu)*100;
+            }
+        </script>
+</body>
+</html>
+
