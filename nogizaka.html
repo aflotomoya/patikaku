@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>ぱちんこ　乃木坂46</title>
+    <link rel="stylesheet" href="nogizaka.css">
+  </head>
+  <body>
+      <header>
+          <div class="header-logo"><a href="patikaku.html">パチンコのハマリ確率</a></div>
+          <div class="header-list">
+          <a href="middle.html">ミドル(1/319)</a>
+          <a href="lightmiddle.html">ライトミドル(1/199)</a>
+          <a href="ama.html">甘デジ(1/99)</a>
+          </div>
+        
+        </header>
+        <form class="nogizaka1-form">
+            <dl>
+                <dt>通常時で</dt>
+                <dd><input type="numner" class="box" name="kaisuu1"></dd>
+                <dt>回ハマる確率は</dt>
+                <p><input type="button" class="calc-btn" onclick="calc1(kaisuu1.value);" value="押せ!!"></p>
+
+                
+                <dd><input id="hamari1" class="box" type="text" readonly=""></dd>
+                <dt>%です。</dt>
+            </dl>
+        </form>
+
+        <form class="nogizaka2-form">
+            <dl>
+                <dt>ぐるぐるRushを</dt>
+                <dd><input type="numner" class="box" name="kaisuu2"></dd>
+                <dt>回駆け抜ける確率は</dt>
+                <p><input type="button" class="calc-btn" onclick="calc2(kaisuu2.value);" value="押せ!!"></p>
+
+                
+                <dd><input id="hamari2" class="box" type="text" readonly=""></dd>
+                <dt>%です。</dt>
+            </dl>
+        </form>
+
+        <script>
+            function calc1(kaisuu1){
+                const hamari1_value = document.getElementById('hamari1').value = Math.pow((228.9/229.9),kaisuu1)*100;
+            }
+            function calc2(kaisuu2){
+                const hamari2_value = document.getElementById('hamari2').value = (Math.pow((2.7/3.7),kaisuu2*5))((0.1*Math.pow((228.9/229.9),kaisuu2*100))+(Math.pow((228.9/229.9),kaisuu2*50)))*100;
+
+            }
+        </script>
+</body>
+</html>
+
